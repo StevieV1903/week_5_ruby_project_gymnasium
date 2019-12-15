@@ -23,7 +23,7 @@ attr_accessor :first_name, :last_name, :date_of_birth, :address, :post_code
     RETURNING id"
     values = [@first_name, @last_name, @date_of_birth, @address, @post_code]
     result = SqlRunner.run( sql, values )
-    id =result.first['id']
+    id = result.first()['id']
     @id = id.to_i
   end
 

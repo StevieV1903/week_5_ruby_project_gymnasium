@@ -1,14 +1,15 @@
 DROP TABLE bookings;
-DROP TABLE sessions;
 DROP TABLE members;
+DROP TABLE sessions;
+
 
 CREATE TABLE members (
   id SERIAL PRIMARY KEY,
   first_name VARCHAR(255),
   last_name VARCHAR(255),
-  date_of_birth VARCHAR(),
+  date_of_birth VARCHAR(255),
   address VARCHAR(255),
-  post_code VARCHAR(7)
+  post_code VARCHAR(255)
 );
 
 CREATE TABLE sessions (

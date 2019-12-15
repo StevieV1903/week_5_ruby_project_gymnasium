@@ -44,24 +44,24 @@ session1 = Session.new({
   'type' => 'Cardio',
   'duration' => 40})
 session1.save
-#
-# session2 = Session.new({
-#   'name' => 'Kettlebells',
-#   'type' => 'Toning',
-#   'duration' => 30})
-# session2.save
-#
-# session3 = Session.new({
-#   'name' => 'Box Fit',
-#   'type' => 'Cardio',
-#   'duration' => 35})
-# session3.save
-#
-# session4 = Session.new({
-#   'name' => 'Pilates',
-#   'type' => 'Core',
-#   'duration' => 60})
-# session4.save
+
+session2 = Session.new({
+  'name' => 'Kettlebells',
+  'type' => 'Toning',
+  'duration' => 30})
+session2.save
+
+session3 = Session.new({
+  'name' => 'Box Fit',
+  'type' => 'Cardio',
+  'duration' => 35})
+session3.save
+
+session4 = Session.new({
+  'name' => 'Pilates',
+  'type' => 'Core',
+  'duration' => 60})
+session4.save
 
 binding.pry
 nil
