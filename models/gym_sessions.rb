@@ -37,17 +37,15 @@ attr_accessor :name, :type, :duration
   end
 
 
-#   #
-#   # def update()
-#   #   sql = "UPDATE sessions SET
-#   #   (
-#   #     name, type, duration
-#   #     ) =
-#   #   ($1, $2, $3) WHERE
-#   #   id = $4"
-#   #   values = [@name, @type, @duration, @id]
-#   #   SqlRunner.run( sql, values )
-#   # end
+  def update()
+    sql = "UPDATE sessions SET
+    (name, type, duration)
+    =
+    ($1, $2, $3)
+    WHERE id = $4"
+    values = [@name, @type, @duration, @id]
+    SqlRunner.run( sql, values )
+  end
 
 def delete()
   sql = "DELETE from sessions
