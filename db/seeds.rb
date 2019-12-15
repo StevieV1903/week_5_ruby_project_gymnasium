@@ -4,7 +4,7 @@ require_relative( '../models/gym_members' )
 require_relative( '../models/gym_sessions' )
 require_relative( '../models/gym_bookings')
 
-
+Booking.delete_all()
 Member.delete_all()
 Session.delete_all()
 
