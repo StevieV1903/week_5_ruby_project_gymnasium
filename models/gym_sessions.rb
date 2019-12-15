@@ -63,6 +63,14 @@ def self.find( id )
     return Session.new( results.first )
   end
 
+  def list_of_members_booked_into_a_session()
+    sql = "SELECT members.* FROM members
+    INNER JOIN bookings ON bookings.member_id = members.id
+    WHERE session_id = $1"
+    values = [@id]
+    member_results = SqlRunner.run( sql,values )
+    return member_results.map{ |member| Member.new( member )}
+  end
 
 def self.map_items( session_data )
   return session_data.map { |session| Session.new( session )}
