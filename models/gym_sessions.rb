@@ -13,35 +13,21 @@ attr_accessor :name, :type, :duration
   end
 
   def save()
-sql = "INSERT INTO sessions
-(name, type, duration)
-VALUES
-($1, $2, $3)
-RETURNING id"
-values = [@name, @type, @duration]
-result = SqlRunner.run( sql, values )
-id = result.first()['id']
-@id = id.to_i 
+    sql = "INSERT INTO sessions
+    (name, type, duration)
+    VALUES
+    ($1, $2, $3)
+    RETURNING id"
+    values = [@name, @type, @duration]
+    result = SqlRunner.run( sql, values )
+    id = result.first()['id']
+    @id = id.to_i
   end
 
-
-
-  # def save()
-  #   sql = "INSERT INTO sessions
-  #   (name, type, duration)
-  #   VALUES
-  #   ($1, $2, $3)
-  #   RETURNING id"
-  #   values = [@name, @type, @duration]
-  #   result = SqlRunner.run( sql, values )
-  #   id = result.first()['id']
-  #   @id = id.to_i
-  # end
-
-#   # def self.delete_all()
-#   #   sql = "DELETE FROM sessions"
-#   #   SqlRunner.run(sql)
-#   # end
+  def self.delete_all()
+    sql = "DELETE FROM sessions"
+    SqlRunner.run(sql)
+  end
 #
 #   # def delete()
 #   #   sql = "DELETE from sessions
