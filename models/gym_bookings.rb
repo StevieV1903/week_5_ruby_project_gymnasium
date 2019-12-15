@@ -34,6 +34,13 @@ class Booking
     return bookings
   end
 
+  def delete()
+      sql = "DELETE from bookings
+      WHERE id = $1"
+      values = [@id]
+      SqlRunner.run( sql, values )
+    end
+
   def self.map_items( booking_data )
     return booking_data.map { |booking| Booking.new( booking )}
   end
