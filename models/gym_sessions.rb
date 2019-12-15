@@ -35,13 +35,8 @@ attr_accessor :name, :type, :duration
     sessions = map_items( session_data )
     return sessions
   end
-#
-#   # def delete()
-#   #   sql = "DELETE from sessions
-#   #   WHERE id = $1"
-#   #   values = [@id]
-#   #   SqlRunner.run( sql, values )
-#   # end
+
+
 #   #
 #   # def update()
 #   #   sql = "UPDATE sessions SET
@@ -53,6 +48,13 @@ attr_accessor :name, :type, :duration
 #   #   values = [@name, @type, @duration, @id]
 #   #   SqlRunner.run( sql, values )
 #   # end
+
+def delete()
+  sql = "DELETE from sessions
+  WHERE id = $1"
+  values = [@id]
+  SqlRunner.run( sql, values )
+end
 
 def self.find( id )
     sql = "SELECT * FROM sessions
