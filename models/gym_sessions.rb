@@ -28,6 +28,13 @@ attr_accessor :name, :type, :duration
     sql = "DELETE FROM sessions"
     SqlRunner.run(sql)
   end
+
+  def self.all()
+    sql = "SELECT * FROM sessions"
+    session_data = SqlRunner.run(sql)
+    sessions = map_items(session_data)
+    return sessions
+  end
 #
 #   # def delete()
 #   #   sql = "DELETE from sessions
@@ -47,5 +54,9 @@ attr_accessor :name, :type, :duration
 #   #   SqlRunner.run( sql, values )
 #   # end
 #
-#
+
+def self.map_items(session_data)
+  return session_data.map { |session| Session.new(session)}
+end
+
 end
