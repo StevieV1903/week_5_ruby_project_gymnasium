@@ -26,13 +26,13 @@ attr_accessor :name, :type, :duration
 
   def self.delete_all()
     sql = "DELETE FROM sessions"
-    SqlRunner.run(sql)
+    SqlRunner.run( sql )
   end
 
   def self.all()
     sql = "SELECT * FROM sessions"
-    session_data = SqlRunner.run(sql)
-    sessions = map_items(session_data)
+    session_data = SqlRunner.run( sql )
+    sessions = map_items( session_data )
     return sessions
   end
 #
@@ -53,6 +53,14 @@ attr_accessor :name, :type, :duration
 #   #   values = [@name, @type, @duration, @id]
 #   #   SqlRunner.run( sql, values )
 #   # end
+
+def self.find( id )
+    sql = "SELECT * FROM sessions
+    WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run( sql, values )
+    return Session.new( results.first )
+  end
 #
 
 def self.map_items(session_data)
