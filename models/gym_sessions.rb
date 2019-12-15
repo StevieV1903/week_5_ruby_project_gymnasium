@@ -10,15 +10,17 @@ attr_accessor :name, :type, :duration
     @name = options['name']
     @type = options['type']
     @duration = options['duration']
+    @day = options['day']
+    @start_time = options['start_time']
   end
 
   def save()
     sql = "INSERT INTO sessions
-    (name, type, duration)
+    (name, type, duration, day, start_time)
     VALUES
-    ($1, $2, $3)
+    ($1, $2, $3, $4, $5)
     RETURNING id"
-    values = [@name, @type, @duration]
+    values = [@name, @type, @duration, @day, @start_time]
     result = SqlRunner.run( sql, values )
     id = result.first()['id']
     @id = id.to_i
@@ -39,11 +41,11 @@ attr_accessor :name, :type, :duration
 
   def update()
     sql = "UPDATE sessions SET
-    (name, type, duration)
+    (name, type, duration, day, start_time)
     =
-    ($1, $2, $3)
-    WHERE id = $4"
-    values = [@name, @type, @duration, @id]
+    ($1, $2, $3, $4, $5)
+    WHERE id = $6"
+    values = [@name, @type, @duration, @day, @start_time, @id]
     SqlRunner.run( sql, values )
   end
 
@@ -63,8 +65,8 @@ def self.find( id )
   end
 #
 
-def self.map_items(session_data)
-  return session_data.map { |session| Session.new(session)}
+def self.map_items( session_data )
+  return session_data.map { |session| Session.new( session )}
 end
 
 end

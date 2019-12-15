@@ -34,8 +34,8 @@ attr_accessor :first_name, :last_name, :date_of_birth, :address, :post_code
 
   def self.all()
     sql = "SELECT * FROM members"
-    member_data = SqlRunner.run(sql)
-    members = map_items(member_data)
+    member_data = SqlRunner.run( sql )
+    members = map_items( member_data )
     return members
   end
 
@@ -48,11 +48,10 @@ attr_accessor :first_name, :last_name, :date_of_birth, :address, :post_code
 
 def update()
     sql = "UPDATE members SET
-    (
-      first_name, last_name, date_of_birth, address, post_code
-      ) =
-    ($1, $2, $3, $4, $5) WHERE
-    id = $6"
+    (first_name, last_name, date_of_birth, address, post_code)
+    =
+    ($1, $2, $3, $4, $5)
+    WHERE id = $6"
     values = [@first_name, @last_name, @date_of_birth, @address, @post_code, @id]
     SqlRunner.run( sql, values )
   end
@@ -66,8 +65,8 @@ def update()
     end
 
 
-  def self.map_items(member_data)
-    return member_data.map { |member| Member.new(member)}
+  def self.map_items( member_data )
+    return member_data.map { |member| Member.new( member )}
   end
 
 
