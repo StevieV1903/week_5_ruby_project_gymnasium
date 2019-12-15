@@ -46,10 +46,6 @@ attr_accessor :first_name, :last_name, :date_of_birth, :address, :post_code
       SqlRunner.run( sql, values )
     end
 
-def self.map_items(member_data)
-  return member_data.map { |member| Member.new(member)}
-end
-
 def update()
     sql = "UPDATE members SET
     (
@@ -59,6 +55,19 @@ def update()
     id = $6"
     values = [@first_name, @last_name, @date_of_birth, @address, @post_code, @id]
     SqlRunner.run( sql, values )
+  end
+
+  def self.find( id )
+      sql = "SELECT * FROM members
+      WHERE id = $1"
+      values = [id]
+      results = SqlRunner.run( sql, values )
+      return Member.new( results.first )
+    end
+
+
+  def self.map_items(member_data)
+    return member_data.map { |member| Member.new(member)}
   end
 
 
