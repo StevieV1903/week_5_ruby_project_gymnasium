@@ -64,6 +64,15 @@ def update()
       return Member.new( results.first )
     end
 
+    def member_booked_into_sessions()
+      sql = "SELECT sessions.* FROM sessions
+      INNER JOIN bookings ON bookings.session_id = sessions.id
+      WHERE member_id = $1"
+      values = [@id]
+      session_results = SqlRunner.run( sql, values )
+      return session_results.map{ |session| Session.new( session )}
+    end
+
 
   def self.map_items( member_data )
     return member_data.map { |member| Member.new( member )}

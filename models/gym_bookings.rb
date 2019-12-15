@@ -41,6 +41,8 @@ class Booking
       SqlRunner.run( sql, values )
     end
 
+  
+
   def self.map_items( booking_data )
     return booking_data.map { |booking| Booking.new( booking )}
   end

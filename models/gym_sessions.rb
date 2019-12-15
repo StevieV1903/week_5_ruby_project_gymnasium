@@ -38,7 +38,6 @@ attr_accessor :name, :type, :duration
     return sessions
   end
 
-
   def update()
     sql = "UPDATE sessions SET
     (name, type, duration, day, start_time)
@@ -63,7 +62,7 @@ def self.find( id )
     results = SqlRunner.run( sql, values )
     return Session.new( results.first )
   end
-#
+
 
 def self.map_items( session_data )
   return session_data.map { |session| Session.new( session )}
