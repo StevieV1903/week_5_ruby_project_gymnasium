@@ -18,3 +18,9 @@ get '/members/:id/?' do
 @member = Member.find(params[:id])
 erb( :"members/show" )
 end
+
+post '/members/?' do
+  @member = Member.new(params)
+  @member.save
+  erb(:"members/create")
+end
