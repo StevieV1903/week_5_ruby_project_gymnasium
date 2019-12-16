@@ -22,5 +22,15 @@ end
 post '/members/?' do
   @member = Member.new(params)
   @member.save
-  erb(:"members/create")
+  erb( :"members/create" )
+end
+
+get '/members/:id/edit' do
+  @member = Member.find(params[:id])
+  erb(:"members/edit")
+end
+
+post '/members/:id/update' do
+  Member.new( params ).update
+  erb( :"members/update" )
 end
