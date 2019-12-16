@@ -1,5 +1,4 @@
-
-  <% @members.each do |member| %>
-    <p>Name: <%= member.first_name.capitalize %> <%= member.last_name.capitalize %></p>
-    <a href="/members/<%=member.id%>">Member Details</a>
-  <% end %>
+<% @members.each do |member| %>
+<h3>Name: <%= member.format_name %></h3>
+<a href="/members/<%=member.id%>">Member Details</a>
+<% end %>

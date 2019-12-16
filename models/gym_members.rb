@@ -73,6 +73,11 @@ def update()
       return session_results.map{ |session| Session.new( session )}
     end
 
+    def format_name
+    return "#{@first_name.capitalize} #{@last_name.capitalize}"
+  end
+
+
 #Helper method for mapping
   def self.map_items( member_data )
     return member_data.map { |member| Member.new( member )}
