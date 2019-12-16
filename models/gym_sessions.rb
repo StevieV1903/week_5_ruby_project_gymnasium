@@ -72,6 +72,7 @@ def self.find( id )
     return member_results.map{ |member| Member.new( member )}
   end
 
+#Helper method for mapping
 def self.map_items( session_data )
   return session_data.map { |session| Session.new( session )}
 end

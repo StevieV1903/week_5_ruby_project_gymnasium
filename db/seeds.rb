@@ -104,5 +104,35 @@ booking2 = Booking.new({
 })
 booking2.save()
 
+booking3 = Booking.new({
+  "member_id" => member3.id,
+  "session_id" => session3.id
+})
+booking3.save()
+
+booking4 = Booking.new({
+  "member_id" => member4.id,
+  "session_id" => session4.id
+})
+booking4.save()
+
+booking5 = Booking.new({
+  "member_id" => member1.id,
+  "session_id" => session3.id
+})
+booking5.save()
+
+booking6 = Booking.new({
+  "member_id" => member2.id,
+  "session_id" => session4.id
+})
+booking6.save()
+
+booking7 = Booking.new({
+  "member_id" => member3.id,
+  "session_id" => session1.id
+})
+booking4.save()
+
 binding.pry
 nil
