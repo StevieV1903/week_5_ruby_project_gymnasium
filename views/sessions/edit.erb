@@ -3,18 +3,39 @@
 <label for="name-field">Name: </label>
 <input type="text" name="name" id="name-field" value="<%= @session.name %>">
 
-<label for="last-name">Last Name: </label>
-<input type="text" name="last_name" id="last-name" value="<%= @member.last_name %>">
+<label for="type_select">Select Type:</label>
+<select name="session_id" id="type_select">
+<option value="1">Cardio</option>
+<option value="2">Core</option>
+<option value="3">Strength</option>
+<option value="4">Toning</option>
+</select>
 
-<label for="date-of-birth">Date of Birth: </label>
-<input type="text" name="date_of_birth" id="date-of-birth" value="<%= @member.date_of_birth %>">
+<label for="duration-field">Duration (mins): </label>
+<input
+type="text"
+name="durartion"
+id="duration-field"
+/>
 
-<label for="address-field">Address: </label>
-<input type="text" name="address" id="address-field" value="<%= @member.address %>">
+<label for="day_select">Select Day:</label>
+<select name="day_id" id="day_select">
+<option value="1">Monday</option>
+<option value="2">Tuesday</option>
+<option value="3">Wednesday</option>
+<option value="4">Thursday</option>
+<option value="5">Friday</option>
+<option value="6">Saturday</option>
+<option value="7">Sunday</option>
+</select>
 
-<label for="post-code">Post Code: </label>
-<input type="text" name="post_code" id="post-code" value="<%= @member.post_code %>">
+<label for="start-time">Start Time (24hrs): </label>
+<input
+type="text"
+name="start_time"
+id="start-time"
+/>
 
-<input type="submit" value="Update Member">
+<input type="submit" value="Update Session">
 
 </form>

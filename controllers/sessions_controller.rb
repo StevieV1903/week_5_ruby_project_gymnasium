@@ -29,11 +29,11 @@ get '/sessions/:id/edit' do
   @session = Session.find( params[:id] )
   erb(:"sessions/edit")
 end
-#
-# post '/members/:id/update' do
-#   Member.new( params ).update
-#   erb( :"members/update" )
-# end
+
+post '/sessions/:id/update' do
+  Session.new( params ).update
+  erb( :"sessions/update" )
+end
 #
 # post '/members/:id/delete' do
 #   @member = Member.find( params[:id] )
