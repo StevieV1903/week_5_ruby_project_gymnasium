@@ -34,10 +34,10 @@ post '/sessions/:id/update' do
   Session.new( params ).update
   erb( :"sessions/update" )
 end
-#
-# post '/members/:id/delete' do
-#   @member = Member.find( params[:id] )
-#   @member.delete()
-#   erb( :"members/delete" )
-#
-# end
+
+post '/sessions/:id/delete' do
+  @session = Session.find( params[:id] )
+  @session.delete()
+  erb( :"sessions/delete" )
+
+end
