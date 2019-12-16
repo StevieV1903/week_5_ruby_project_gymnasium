@@ -15,7 +15,7 @@ get '/members/new' do
 end
 
 get '/members/:id/?' do
-@member = Member.find(params[:id])
+@member = Member.find( params[:id] )
 erb( :"members/show" )
 end
 
@@ -33,4 +33,11 @@ end
 post '/members/:id/update' do
   Member.new( params ).update
   erb( :"members/update" )
+end
+
+post '/members/:id/delete' do
+  @member = Member.find( params[:id] )
+  @member.delete()
+  erb( :"members/delete" )
+
 end
