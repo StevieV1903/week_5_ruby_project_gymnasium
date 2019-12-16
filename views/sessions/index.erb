@@ -1,0 +1,4 @@
+<% @sessions.each do |session| %>
+  <p>Name: <%= session.name.capitalize %></p>
+  <a href="/sessions/<%=session.id%>">Session Details</a>
+<% end %>

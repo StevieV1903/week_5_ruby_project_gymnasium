@@ -1,8 +1,0 @@
-<div>
-  <% @members.each do |member| %>
-  <div>
-    <p>Name: <%= member.first_name.capitalize %><%= member.last_name.capitalize %> </p>
-    <a href="/members/<%=member.id%>">Show Details</a>
-  </div>
-  <% end %>
-</div>

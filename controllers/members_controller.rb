@@ -7,5 +7,5 @@ also_reload('../models/*')
 
 get '/members/?' do
 @members = Member.all()
-erb(:index)
+erb(:"members/index")
 end
