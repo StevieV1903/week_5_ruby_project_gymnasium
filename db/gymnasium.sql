@@ -16,7 +16,7 @@ CREATE TABLE sessions (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   type VARCHAR(255),
-  duration INT,
+  duration VARCHAR(255),
   day VARCHAR(255),
   start_time VARCHAR(255)
 
