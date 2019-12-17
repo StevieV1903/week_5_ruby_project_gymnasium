@@ -5,6 +5,12 @@
 <p>Duration: <%= @session.duration %> minutes</p>
 <p>Day: <%= @session.day %></p>
 <p>Start Time: <%= @session.start_time %></p>
+<hr>
+
+<% for members in @members_list%>
+<p>The following Members are booked into this session; <%= members.format_name %> </p>
+<% end %>
+<hr>
 
 
 <a href="/sessions/<%= @session.id %>/edit">Edit Session Details</a>

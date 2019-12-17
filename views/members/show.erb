@@ -4,6 +4,12 @@
 <p>Date of Birth: <%= @member.date_of_birth %></p>
 <p>Address: <%= @member.address %></p>
 <p>Post Code: <%= @member.post_code%></p>
+<hr>
+
+<% for sessions in @sessions_list%>
+<p>Member is booked into the following sessions; <%= sessions.name %> at <%= sessions.start_time %> on <%= sessions.day %></p>
+<% end %>
+<hr>
 
 <a href="/members/<%= @member.id %>/edit">Edit Member Details</a>
 
