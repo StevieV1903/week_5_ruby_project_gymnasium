@@ -1,8 +1,12 @@
-<h2>List of Gymnasium Members</h2>
-<% @members.each do |member| %>
-<h3>Name: <%= member.format_name %></h3>
-<a href="/members/<%=member.id%>">Member Details</a>
-<hr>
-<% end %>
-<h2><a class="btn btn--action" href="/members/new">Create New Member</a></h2>
-<hr>
+<div class="members-details-wrapper">
+  <h2>List of Gymnasium Members</h2>
+  <br>
+  <br>
+  <% @members.each do |member| %>
+  <h3>Name: <%= member.format_name %></h3>
+  <a href="/members/<%=member.id%>">Member Details</a>
+  <hr>
+  <% end %>
+  <h3><a class="btn btn--action" href="/members/new">Create New Member</a></h3>
+  <hr>
+</div>

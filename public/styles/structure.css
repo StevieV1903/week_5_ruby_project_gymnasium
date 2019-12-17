@@ -9,12 +9,12 @@ body {
   text-align: right;
   padding: 10px;
   padding-right: 25px;
-  margin: 10px;
+
 }
 
 #logo {
   text-align: right;
-  font-family: Arial, serif;
+  font-family: Verdana, serif;
   font-size: 45px;
   text-transform: uppercase;
   padding-right: 25px;
@@ -45,4 +45,28 @@ a:hover {
 .home-wrapper {
   padding-top: 200px;
   padding-right: 25px;
+}
+
+.members-details-wrapper {
+  padding-right: 25px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Verdana, serif;
+  text-align: right;
+}
+
+.sessions-details-wrapper {
+  padding-right: 25px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Verdana, serif;
+  text-align: right;
+}
+
+.new-member-wrapper {
+  padding-top: 200px;
+  padding-right: 25px;
+  justify-content: flex-end;
 }

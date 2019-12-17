@@ -1,8 +1,12 @@
+<div class="sessions-details-wrapper">
 <h2>List of Gymnasium Sessions</h2>
+<br>
+<br>
 <% @sessions.each do |session| %>
 <p>Name: <%= session.name.capitalize %></p>
 <a href="/sessions/<%=session.id%>">Session Details</a>
 <hr>
 <% end %>
-<h2><a class="btn btn--action" href="/sessions/new">Create New Session</a></h2>
+<h3><a class="btn btn--action" href="/sessions/new">Create New Session</a></h3>
 <hr>
+</div>
