@@ -1,0 +1,48 @@
+body {
+  background: midnightblue url('/images/gymnasium3.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: papayawhip;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Garamond, serif;
+  text-align: right;
+  padding: 10px;
+  padding-right: 25px;
+  margin: 10px;
+}
+
+#logo {
+  text-align: right;
+  font-family: Arial, serif;
+  font-size: 45px;
+  text-transform: uppercase;
+  padding-right: 25px;
+}
+
+nav {
+  padding-right: 25px;
+
+}
+
+nav ul li {
+  display: inline;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  padding: 5px;
+  margin: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: skyblue;
+}
+
+a:hover {
+  color: darkred;
+}
+
+.home-wrapper {
+  padding-top: 200px;
+  padding-right: 25px;
+}
