@@ -6,8 +6,8 @@ also_reload('../models/*')
 
 
 get '/members/?' do
-@members = Member.all()
-erb( :"members/index" )
+  @members = Member.all()
+  erb( :"members/index" )
 end
 
 get '/members/new' do
@@ -15,19 +15,19 @@ get '/members/new' do
 end
 
 get '/members/:id/?' do
-@member = Member.find( params[:id] )
-erb( :"members/show" )
+  @member = Member.find( params[:id] )
+  erb( :"members/show" )
 end
 
 post '/members/?' do
-  @member = Member.new(params)
+  @member = Member.new( params )
   @member.save
   erb( :"members/create" )
 end
 
 get '/members/:id/edit' do
-  @member = Member.find(params[:id])
-  erb(:"members/edit")
+  @member = Member.find( params[:id] )
+  erb( :"members/edit" )
 end
 
 post '/members/:id/update' do

@@ -6,8 +6,8 @@ also_reload('../models/*')
 
 
 get '/sessions/?' do
-@sessions = Session.all()
-erb(:"sessions/index")
+  @sessions = Session.all()
+  erb(:"sessions/index")
 end
 
 get '/sessions/new' do
@@ -15,8 +15,8 @@ get '/sessions/new' do
 end
 
 get '/sessions/:id/?' do
-@session = Session.find( params[:id] )
-erb( :"sessions/show" )
+  @session = Session.find( params[:id] )
+  erb( :"sessions/show" )
 end
 
 post '/sessions/?' do
@@ -27,7 +27,7 @@ end
 
 get '/sessions/:id/edit' do
   @session = Session.find( params[:id] )
-  erb(:"sessions/edit")
+  erb( :"sessions/edit" )
 end
 
 post '/sessions/:id/update' do

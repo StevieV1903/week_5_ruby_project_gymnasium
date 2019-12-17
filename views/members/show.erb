@@ -1,4 +1,3 @@
-
 <h2>Members details</h2>
 <hr>
 <h3><%= @member.format_name %> </h3>
@@ -6,6 +5,6 @@
 <p>Address: <%= @member.address %></p>
 <p>Post Code: <%= @member.post_code%></p>
 
-<a href="/members/<%= @member.id %>/edit">Edit Member</a>
+<a href="/members/<%= @member.id %>/edit">Edit Member Details</a>
 
-<form action="/members/<%= @member.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+<form action="/members/<%= @member.id %>/delete" method="POST"><input type="submit" value="Delete Member"></form>

@@ -1,0 +1,7 @@
+<h2>List of Gymnasium Bookings</h2>
+<% @bookings.each do |booking| %>
+<h3>Booking: <%= booking.member_id %> <%= booking.session_id %></h3>
+<hr>
+<% end %>
+<!-- <h2><a class="btn btn--action" href="/members/new">Create New Booking</a></h2>
+<hr> -->

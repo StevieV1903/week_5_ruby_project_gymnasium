@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Booking
 
-  attr_reader( :member_id, :session_id, :id )
+  attr_reader( :id, :member_id, :session_id )
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
@@ -40,6 +40,22 @@ class Booking
       values = [@id]
       SqlRunner.run( sql, values )
     end
+
+    def gym_member()
+      sql = "SELECT * FROM members
+      WHERE id = $1"
+      values = [@member_id]
+      results = SqlRunner.run( sql, values )
+      return Member.new( results.first )
+    end
+
+    def gym_session()
+      sql = "SELECT * FROM members
+      WHERE id = $1"
+      values = [@session_id]
+      results = SqlRunner.run( sql, values )
+      return Session.new( results.first )
+    end 
 
   def self.map_items( booking_data )
     return booking_data.map { |booking| Booking.new( booking )}
