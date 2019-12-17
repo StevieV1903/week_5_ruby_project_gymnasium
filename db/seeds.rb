@@ -1,8 +1,8 @@
 require( 'pry' )
 
-require_relative( '../models/gym_members' )
-require_relative( '../models/gym_sessions' )
-require_relative( '../models/gym_bookings')
+require_relative( '../models/member' )
+require_relative( '../models/session' )
+require_relative( '../models/booking')
 
 Booking.delete_all()
 Member.delete_all()
