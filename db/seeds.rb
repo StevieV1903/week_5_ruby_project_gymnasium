@@ -129,10 +129,10 @@ booking6 = Booking.new({
 booking6.save()
 
 booking7 = Booking.new({
-  "member_id" => member3.id,
+  "member_id" => member6.id,
   "session_id" => session1.id
 })
-booking4.save()
+booking7.save()
 
 binding.pry
 nil

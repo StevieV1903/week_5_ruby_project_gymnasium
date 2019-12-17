@@ -22,3 +22,9 @@ post '/bookings/?' do
   @booking.save
   erb( :"bookings/create" )
 end
+
+post '/bookings/:id/delete' do
+  @booking = Booking.find( params[:id] )
+  @booking.delete()
+  erb( :"bookings/delete" )
+end
