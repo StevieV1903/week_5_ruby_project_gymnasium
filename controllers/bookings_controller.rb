@@ -11,6 +11,14 @@ get '/bookings/?' do
   erb( :"bookings/index" )
 end
 
-# get '/bookings/new' do
-#   erb( :"bookings/new" )
-# end
+get '/bookings/new' do
+  @members = Member.all()
+  @sessions = Session.all()
+  erb( :"bookings/new" )
+end
+
+post '/bookings/?' do
+  @booking = Booking.new( params )
+  @booking.save
+  erb( :"bookings/create" )
+end

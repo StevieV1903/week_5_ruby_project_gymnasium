@@ -54,7 +54,7 @@ member6 = Member.new({
   'date_of_birth' => '01/12/1984',
   'address' => '76 Muirston Place, Kirkliston',
   'post_code' => 'EH317UM'})
-member1.save
+member6.save
 
 session1 = Session.new({
   'name' => 'Zumba',
