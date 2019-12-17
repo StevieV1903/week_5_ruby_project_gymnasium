@@ -1,7 +1,11 @@
 <h2>List of Gymnasium Bookings</h2>
+<div class="bookings-details-wrapper">
+<br>
+<br>
 <% for booking in @bookings %>
-  <p><%= booking.gym_member.format_name %> is booked into <%= booking.gym_session.name %> on <%= booking.gym_session.day %> at <%= booking.gym_session.start_time %> </p>
+  <h3><%= booking.gym_member.format_name %> is booked into <%= booking.gym_session.name %> on <%= booking.gym_session.day %> at <%= booking.gym_session.start_time %> </h3>
 <hr>
 <% end %>
-<h2><a class="btn btn--action" href="/bookings/new">Create New Booking</a></h2>
+<h3><a class="btn btn--action" href="/bookings/new">Create New Booking</a></h3>
 <hr>
+</div>

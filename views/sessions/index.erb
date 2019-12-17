@@ -3,7 +3,7 @@
 <br>
 <br>
 <% @sessions.each do |session| %>
-<p>Name: <%= session.name.capitalize %></p>
+<h3>Name: <%= session.name.capitalize %></h3>
 <a href="/sessions/<%=session.id%>">Session Details</a>
 <hr>
 <% end %>

@@ -1,8 +1,8 @@
 body {
-  background: midnightblue url('/images/gymnasium3.jpg');
+  background: #161a40 url('/images/gymnasium3.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
-  color: papayawhip;
+  color: rgb(221, 220, 217);
   font-size: 20px;
   font-weight: bold;
   font-family: Verdana, serif;
@@ -59,7 +59,7 @@ a:hover {
 .sessions-details-wrapper {
   padding-right: 25px;
   margin-bottom: 15px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   font-family: Verdana, serif;
   text-align: right;
@@ -69,4 +69,14 @@ a:hover {
   padding-top: 200px;
   padding-right: 25px;
   justify-content: flex-end;
+}
+
+.bookings-details-wrapper {
+  padding-top: 100px;
+  padding-right: 25px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Verdana, serif;
+  text-align: right;
 }

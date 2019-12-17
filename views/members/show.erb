@@ -1,5 +1,5 @@
 <h2>Members details</h2>
-<hr>
+<br>
 <h3><%= @member.format_name %> </h3>
 <p>Date of Birth: <%= @member.date_of_birth %></p>
 <p>Address: <%= @member.address %></p>
@@ -7,7 +7,7 @@
 <hr>
 
 <% for sessions in @sessions_list%>
-<p>Member is booked into the following sessions; <%= sessions.name %> at <%= sessions.start_time %> on <%= sessions.day %></p>
+<p>Member is booked into <%= sessions.name %> at <%= sessions.start_time %> on <%= sessions.day %></p>
 <% end %>
 <hr>
 
