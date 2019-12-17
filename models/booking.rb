@@ -50,12 +50,12 @@ class Booking
     end
 
     def gym_session()
-      sql = "SELECT * FROM members
+      sql = "SELECT * FROM sessions
       WHERE id = $1"
       values = [@session_id]
       results = SqlRunner.run( sql, values )
       return Session.new( results.first )
-    end 
+    end
 
   def self.map_items( booking_data )
     return booking_data.map { |booking| Booking.new( booking )}

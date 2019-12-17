@@ -11,6 +11,6 @@ get '/bookings/?' do
   erb( :"bookings/index" )
 end
 
-get '/bookings/new' do
-  erb( :"bookings/new" )
-end
+# get '/bookings/new' do
+#   erb( :"bookings/new" )
+# end
