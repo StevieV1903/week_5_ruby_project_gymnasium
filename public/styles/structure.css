@@ -12,6 +12,11 @@ body {
 
 }
 
+h1 {
+  color: #00ffd9
+
+}
+
 #logo {
   text-align: right;
   font-family: Verdana, serif;
@@ -58,6 +63,7 @@ a:hover {
 }
 
 .sessions-details-wrapper {
+  padding-top: 100px;
   padding-right: 25px;
   margin-bottom: 15px;
   font-size: 16px;
