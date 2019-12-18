@@ -19,7 +19,6 @@ CREATE TABLE sessions (
   duration VARCHAR(255),
   day VARCHAR(255),
   start_time VARCHAR(255)
-
 );
 
 CREATE TABLE bookings (

@@ -2,8 +2,8 @@ require_relative('../db/sql_runner')
 
 class Session
 
-attr_reader :id
-attr_accessor :name, :type, :duration, :day, :start_time
+  attr_reader :id
+  attr_accessor :name, :type, :duration, :day, :start_time
 
   def initialize( options )
     @id = options['id'].to_i
@@ -48,14 +48,14 @@ attr_accessor :name, :type, :duration, :day, :start_time
     SqlRunner.run( sql, values )
   end
 
-def delete()
-  sql = "DELETE from sessions
-  WHERE id = $1"
-  values = [@id]
-  SqlRunner.run( sql, values )
-end
+  def delete()
+    sql = "DELETE from sessions
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run( sql, values )
+  end
 
-def self.find( id )
+  def self.find( id )
     sql = "SELECT * FROM sessions
     WHERE id = $1"
     values = [id]
@@ -72,9 +72,9 @@ def self.find( id )
     return member_results.map{ |member| Member.new( member )}
   end
 
-#Helper method for mapping
-def self.map_items( session_data )
-  return session_data.map { |session| Session.new( session )}
-end
+  #Helper method for mapping
+  def self.map_items( session_data )
+    return session_data.map { |session| Session.new( session )}
+  end
 
 end
