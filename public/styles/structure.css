@@ -43,7 +43,7 @@ a:hover {
 }
 
 .home-wrapper {
-  padding-top: 200px;
+  padding-top: 225px;
   padding-right: 25px;
 }
 
@@ -65,12 +65,6 @@ a:hover {
   text-align: right;
 }
 
-.new-member-wrapper {
-  padding-top: 200px;
-  padding-right: 25px;
-  justify-content: flex-end;
-}
-
 .bookings-details-wrapper {
   padding-top: 100px;
   padding-right: 25px;
@@ -80,6 +74,20 @@ a:hover {
   font-family: Verdana, serif;
   text-align: right;
 }
+
+.new-member-wrapper {
+  padding-top: 200px;
+  padding-right: 25px;
+  justify-content: flex-end;
+}
+
+.new-session-wrapper {
+  padding-top: 200px;
+  padding-right: 25px;
+  justify-content: flex-end;
+}
+
+
 
 .confirmation-wrapper {
   padding-top: 200px;
@@ -103,4 +111,4 @@ a:hover {
   font-size: 16px;
   font-weight: bold;
   font-family: Verdana, serif;
-  text-align: center;
+  text-align: right;

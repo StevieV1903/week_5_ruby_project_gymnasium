@@ -1,4 +1,6 @@
 <h2>Create a new Session</h2>
+<div class="new-session-wrapper">
+
 <form method="post" action="/sessions">
 
   <label for="name-field">Name: </label>
@@ -8,7 +10,7 @@
   id="name-field"
   />
 
-  <label for="type_select">Select Type:</label>
+  <label for="type_select">Type:</label>
 <select name="type" id="type_select">
   <option value="Cardio">Cardio</option>
   <option value="Core">Core</option>
@@ -23,7 +25,7 @@
   id="duration-field"
   />
 
-  <label for="day-select">Select Day: </label>
+  <label for="day-select">Day: </label>
 <select name="day" id="day-select">
   <option value="Monday">Monday</option>
   <option value="Tuesday">Tuesday</option>
@@ -40,6 +42,9 @@
   name="start_time"
   id="start-time"
   />
+  <br>
+  <br>
 
   <input type="submit" value="Add New Session">
 </form>
+</div>
