@@ -1,4 +1,6 @@
 <h2>Edit Session</h2>
+<div class="edit-session-wrapper">
+
 <form action="/sessions/<%= @session.id %>/update" method="post">
 
 <label for="name-field">Name: </label>
@@ -41,7 +43,10 @@ name="start_time"
 id="start-time"
 value="<%= @session.start_time %>"
 />
+<br>
+<br>
 
 <input type="submit" value="Update Session Details">
 
 </form>
+</div>

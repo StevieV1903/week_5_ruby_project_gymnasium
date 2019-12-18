@@ -80,3 +80,27 @@ a:hover {
   font-family: Verdana, serif;
   text-align: right;
 }
+
+.confirmation-wrapper {
+  padding-top: 200px;
+  padding-right: 25px;
+}
+
+.edit-member-wrapper {
+  padding-top: 200px;
+  padding-right: 25px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Verdana, serif;
+  text-align: right;
+}
+
+.edit-session-wrapper {
+  padding-top: 200px;
+  padding-right: 25px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Verdana, serif;
+  text-align: center;

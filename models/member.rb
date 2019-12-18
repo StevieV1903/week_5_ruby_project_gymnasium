@@ -70,7 +70,8 @@ def update()
       WHERE member_id = $1"
       values = [@id]
       session_results = SqlRunner.run( sql, values )
-      return session_results.map{ |session| Session.new( session )}
+      result = session_results.map{ |session| Session.new( session )}
+      return result
     end
 
     def format_name

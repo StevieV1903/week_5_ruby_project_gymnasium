@@ -2,7 +2,7 @@
 
 <form action="/bookings" method="post">
   <label>
-  Select a Member:
+  Select Member:
     <select name="member_id">
       <% for member in @members %>
       <option value="<%= member.id %>"><%= member.format_name %></option>
@@ -11,7 +11,7 @@
   </label>
 
   <label>
-    Select a Session:
+    Add to Session:
     <select name="session_id">
       <% for session in @sessions %>
       <option value="<%= session.id %>"><%= session.name %></option>
@@ -19,5 +19,5 @@
     </select>
   </label>
 
-  <input class="btn btn--action" type='submit' value="Create New Booking">
+  <input class="btn btn--action" type='submit' value="Submit Booking">
 </form>

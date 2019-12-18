@@ -17,6 +17,7 @@ end
 get '/members/:id/?' do
   @member = Member.find( params[:id] )
   @sessions_list = @member.member_booked_into_sessions()
+  
   erb( :"members/show" )
 end
 
