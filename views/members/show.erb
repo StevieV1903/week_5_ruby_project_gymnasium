@@ -7,7 +7,7 @@
 <hr>
 
 <% if @sessions_list == [] %>
-<%= "<p>  #{@member.first_name}  has not booked into any classes.</p>"%>
+<%= "<p>  #{@member.first_name}  has not booked into any classes yet.</p>"%>
 <%end%>
 
 <% for sessions in @sessions_list%>

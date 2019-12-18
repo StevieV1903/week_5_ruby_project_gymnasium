@@ -7,6 +7,10 @@
 <p>Start Time: <%= @session.start_time %></p>
 <hr>
 
+<% if @members_list == [] %>
+<%= "<p> No members have booked into #{@session.name} yet.</p>"%>
+<%end%>
+
 <% for members in @members_list%>
 <p> <%= members.format_name %> is booked into this session. </p>
 <% end %>
