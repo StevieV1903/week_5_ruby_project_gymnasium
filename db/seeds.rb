@@ -1,5 +1,3 @@
-require( 'pry' )
-
 require_relative( '../models/member' )
 require_relative( '../models/session' )
 require_relative( '../models/booking')
@@ -133,6 +131,3 @@ booking7 = Booking.new({
   "session_id" => session1.id
 })
 booking7.save()
-
-binding.pry
-nil
